@@ -1,0 +1,6 @@
+framework module Pods_RGBControllerTests {
+  umbrella header "Pods-RGBControllerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
