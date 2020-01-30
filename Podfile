@@ -6,11 +6,12 @@ target 'RGBController' do
   use_frameworks!
 
   # Pods for RGBController
-
+    pod 'SwiftMessages'
+    pod 'XLPagerTabStrip'
+  
   target 'RGBControllerTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'SwiftMessages'
   end
 
 end

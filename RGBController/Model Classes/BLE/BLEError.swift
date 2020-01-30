@@ -65,7 +65,7 @@ enum BLEError: Error {
     }
     
     func showErrorMessage() {
-        //SwiftMessagesWrapper.showErrorMessage(title: "Error", body: errorDesctription)
+        SwiftMessagesWrapper.showErrorMessage(title: "Error", body: errorDesctription)
     }
 }
 

@@ -14,11 +14,11 @@ import Foundation
     var warningDescription: String {
         switch self {
         case .scanningTimeout:
-            return "No Doors Found Near You"
+            return "Bluetooth device not found"
         }
     }
     
     func showWarningMessage() {
-        //SwiftMessagesWrapper.showWarningMessage(title: "Oops", body: warningDescription)
+        SwiftMessagesWrapper.showWarningMessage(title: "Oops", body: warningDescription)
     }
 }

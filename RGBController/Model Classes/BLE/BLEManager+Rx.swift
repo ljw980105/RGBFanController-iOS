@@ -61,6 +61,12 @@ extension Reactive where Base: BLEManager {
             .map { $0[0] as? Error }
     }
     
+    var didReceiveWarning: Observable<BLEWarning> {
+        return delegate
+            .methodInvoked(#selector(BLEManagerDelegate.didReceiveWarning(warning:)))
+            .map { BLEWarning(rawValue: $0[0] as! Int)! }
+    }
+    
     func connect(module: String) -> Observable<Void> {
         base.connect(module: module)
         return didConnectToPeripheral

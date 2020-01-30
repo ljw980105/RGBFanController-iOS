@@ -16,4 +16,12 @@ extension UIColor {
         getRed(&r, green: &g, blue: &b, alpha: nil)
         return (Int(r * 255), Int(g * 255), Int(b * 255))
     }
+    
+    func hsb() -> (h: Int, s: Int, b: Int) {
+        var h: CGFloat = 0
+        var s: CGFloat = 0
+        var b: CGFloat = 0
+        getHue(&h, saturation: &s, brightness: &b, alpha: nil)
+        return (Int(h * 255), Int(s * 255), Int(b * 255))
+    }
 }

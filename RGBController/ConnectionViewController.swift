@@ -22,17 +22,34 @@ class ConnectionViewController: UIViewController {
         
         BLEManager.current.start()
         
-        connectButton.rx.tap
+        connectButton.rx
+            .tap
             .flatMap { _ -> Observable<Void> in
                 return BLEManager.current.rx.connect(module: "=ADC_test")
             }
-            .subscribe(onNext: { [weak self] in
-                let vc = SingleColorViewController()
-                vc.modalPresentationStyle = .overFullScreen
+            .subscribe(onNext: { [weak self] _ in
+                let vc = SingleColorManagerViewController()
                 let nav = UINavigationController(rootViewController: vc)
+                nav.modalPresentationStyle = .fullScreen
                 self?.present(nav, animated: true, completion: nil)
             })
             .disposed(by: bag)
+        
+        BLEManager.current.rx.didReceiveError
+            .subscribe(onNext: { error in
+                SwiftMessagesWrapper.showErrorMessage(
+                    title: "Error",
+                    body: error?.localizedDescription ?? "")
+            })
+            .disposed(by: bag)
+        
+        BLEManager.current.rx.didReceiveWarning
+            .subscribe(onNext: { warning in
+                warning.showWarningMessage()
+            })
+            .disposed(by: bag)
     }
+    
+    
 }
 
