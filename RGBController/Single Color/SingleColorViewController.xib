@@ -88,6 +88,17 @@
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="7ZP-L6-VTa">
                     <rect key="frame" x="28" y="760" width="358" height="31"/>
                 </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEc-lg-VDd">
+                    <rect key="frame" x="352" y="512" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="KEc-lg-VDd" secondAttribute="height" multiplier="1:1" id="AAK-fb-cKo"/>
+                        <constraint firstAttribute="height" constant="32" id="YcD-mQ-G7W"/>
+                    </constraints>
+                    <state key="normal" image="moreIcon"/>
+                    <connections>
+                        <action selector="moreButtonTapped:" destination="-1" eventType="touchUpInside" id="Caj-q9-q00"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -102,6 +113,7 @@
                 <constraint firstItem="FL6-xs-SIH" firstAttribute="leading" secondItem="RAV-0w-4KY" secondAttribute="leading" id="Icp-T3-DIZ"/>
                 <constraint firstItem="YAz-Rx-gmk" firstAttribute="leading" secondItem="RAV-0w-4KY" secondAttribute="leading" id="InM-el-91z"/>
                 <constraint firstItem="Dq8-y8-m93" firstAttribute="trailing" secondItem="RAV-0w-4KY" secondAttribute="trailing" id="KRS-bM-3m6"/>
+                <constraint firstItem="KEc-lg-VDd" firstAttribute="centerY" secondItem="YAz-Rx-gmk" secondAttribute="centerY" id="MHA-ws-9Nb"/>
                 <constraint firstItem="7ZP-L6-VTa" firstAttribute="leading" secondItem="RAV-0w-4KY" secondAttribute="leading" id="OQ5-2o-kfM"/>
                 <constraint firstItem="uMv-gQ-vuz" firstAttribute="leading" secondItem="t3y-Dm-3Kf" secondAttribute="leading" id="QWS-DW-c5x"/>
                 <constraint firstItem="YAz-Rx-gmk" firstAttribute="top" secondItem="RAV-0w-4KY" secondAttribute="bottom" constant="30" id="SCe-sM-DHW"/>
@@ -114,6 +126,7 @@
                 <constraint firstItem="jgB-0Q-1FZ" firstAttribute="top" secondItem="YAz-Rx-gmk" secondAttribute="bottom" constant="28" id="n9k-nk-2B8"/>
                 <constraint firstItem="FL6-xs-SIH" firstAttribute="top" secondItem="jgB-0Q-1FZ" secondAttribute="bottom" constant="4" id="nD4-2l-OK7"/>
                 <constraint firstItem="jgB-0Q-1FZ" firstAttribute="leading" secondItem="YAz-Rx-gmk" secondAttribute="leading" id="nX7-A7-ppy"/>
+                <constraint firstItem="KEc-lg-VDd" firstAttribute="trailing" secondItem="RAV-0w-4KY" secondAttribute="trailing" id="pCd-fI-cUU"/>
                 <constraint firstItem="t3y-Dm-3Kf" firstAttribute="leading" secondItem="YAz-Rx-gmk" secondAttribute="trailing" constant="15" id="rbd-s2-ZcG"/>
                 <constraint firstItem="RAV-0w-4KY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="sS1-Ab-1ci"/>
                 <constraint firstItem="uMv-gQ-vuz" firstAttribute="bottom" secondItem="YAz-Rx-gmk" secondAttribute="bottom" id="xfR-Ac-8TH"/>
@@ -122,4 +135,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </view>
     </objects>
+    <resources>
+        <image name="moreIcon" width="32" height="32"/>
+    </resources>
 </document>

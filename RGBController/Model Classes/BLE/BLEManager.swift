@@ -203,11 +203,7 @@ extension BLEManager: CBPeripheralDelegate {
                 DispatchQueue.main.async { [weak self] in
                     print(asciiStr)
                     let strippedString = asciiStr.trimmingCharacters(in: .whitespacesAndNewlines)
-                    if let error = BLEError(errorMessage: strippedString) {
-                        self?.delegate?.didReceiveError?(error: error)
-                    } else {
-                        self?.delegate?.didReceiveMessage?(message: strippedString)
-                    }
+                    self?.delegate?.didReceiveMessage?(message: strippedString)
                 }
             }
         }

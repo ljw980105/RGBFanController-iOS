@@ -18,7 +18,6 @@ enum BLEError: Error {
     case inactiveConnection
     case unsupportedDevice
     case unauthrozied
-    case invalidTOTP
     
     init?(managerState: CBManagerState) {
         switch managerState {
@@ -31,14 +30,6 @@ enum BLEError: Error {
         case .poweredOff:
             self = .bluetoothOff
         default:
-            return nil
-        }
-    }
-    
-    init?(errorMessage: String) {
-        if errorMessage == "INVALID TOKEN" {
-            self = .invalidTOTP
-        } else {
             return nil
         }
     }
@@ -59,8 +50,6 @@ enum BLEError: Error {
             return "Your device does not support Bluetooth"
         case .unauthrozied:
             return "You did not allow the app to use Bluetooth"
-        case .invalidTOTP:
-            return "Failed to send the correct totp token"
         }
     }
     

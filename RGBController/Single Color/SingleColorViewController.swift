@@ -23,8 +23,10 @@ class SingleColorViewController: UIViewController {
     @IBOutlet weak var slider3: UISlider!
     
     private let bag = DisposeBag()
+    let viewModel: SingleColorViewModel
     
     init() {
+        viewModel = SingleColorViewModel()
         super.init(nibName: "SingleColorViewController", bundle: .main)
     }
     
@@ -43,6 +45,16 @@ class SingleColorViewController: UIViewController {
     
     @objc func dismissSingleColor() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func moreButtonTapped(_ sender: UIButton) {
+        let actionSheet = UIAlertController(title: "Actions", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Add Color to Favorites", style: .default) { _ in
+            
+        })
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.view.tintColor = .orange
+        present(actionSheet, animated: true, completion: nil)
     }
     
     // MARK: - Overridables
@@ -69,7 +81,7 @@ class SingleColorViewController: UIViewController {
     // MARK: - Private
     private func setupRx() {
         slider1.rx.value
-            .throttle(0.1, scheduler: MainScheduler())
+            .debounce(.milliseconds(100), scheduler: MainScheduler())
             .subscribe(onNext: { [weak self] value in
                 self?.sliderOneUpdated(with: value)
                 self?.setSampleColor()
@@ -77,7 +89,7 @@ class SingleColorViewController: UIViewController {
             .disposed(by: bag)
         
         slider2.rx.value
-            .throttle(0.1, scheduler: MainScheduler())
+            .debounce(.milliseconds(100), scheduler: MainScheduler())
             .subscribe(onNext: { [weak self] value in
                 self?.sliderTwoUpdated(with: value)
                 self?.setSampleColor()
@@ -85,7 +97,7 @@ class SingleColorViewController: UIViewController {
             .disposed(by: bag)
         
         slider3.rx.value
-            .throttle(0.1, scheduler: MainScheduler())
+            .debounce(.milliseconds(100), scheduler: MainScheduler())
             .subscribe(onNext: { [weak self] value in
                 self?.sliderThreeUpdated(with: value)
                 self?.setSampleColor()
@@ -116,6 +128,7 @@ extension SingleColorViewController: ColorPickerDelegate {
     func colorPicker(_ colorPicker: ColorPicker, touchedAt point: CGPoint, color: UIColor, state: UIGestureRecognizer.State) {
         setColor(color)
         updateSampledColorView(from: color)
+        viewModel.currentColor = color
         
     }
 }

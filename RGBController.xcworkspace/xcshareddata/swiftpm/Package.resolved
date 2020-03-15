@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "JLActivityIndicator",
+        "repositoryURL": "https://github.com/ljw980105/JLActivityIndicator.git",
+        "state": {
+          "branch": null,
+          "revision": "21a900322c59361cd4fc537a37d78b554740c20c",
+          "version": "2.2.1"
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {

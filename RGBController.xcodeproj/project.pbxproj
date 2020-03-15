@@ -15,6 +15,8 @@
 		0431744823E0050E00DF297E /* BLEManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431744223E0050E00DF297E /* BLEManager+Rx.swift */; };
 		0431744B23E0056C00DF297E /* SwiftMessagesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431744A23E0056C00DF297E /* SwiftMessagesWrapper.swift */; };
 		049D4EC123E24F94003109BC /* HSVColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D4EC023E24F94003109BC /* HSVColorViewController.swift */; };
+		049EF5D0241DBA3200C7A711 /* JLActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 049EF5CF241DBA3200C7A711 /* JLActivityIndicator */; };
+		049EF5D2241DC34900C7A711 /* SingleColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EF5D1241DC34900C7A711 /* SingleColorViewModel.swift */; };
 		04A6744023DFFFA30054F7BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6743F23DFFFA30054F7BE /* AppDelegate.swift */; };
 		04A6744223DFFFA30054F7BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6744123DFFFA30054F7BE /* SceneDelegate.swift */; };
 		04A6744423DFFFA30054F7BE /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6744323DFFFA30054F7BE /* ConnectionViewController.swift */; };
@@ -55,6 +57,7 @@
 		0431744223E0050E00DF297E /* BLEManager+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLEManager+Rx.swift"; sourceTree = "<group>"; };
 		0431744A23E0056C00DF297E /* SwiftMessagesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesWrapper.swift; sourceTree = "<group>"; };
 		049D4EC023E24F94003109BC /* HSVColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSVColorViewController.swift; sourceTree = "<group>"; };
+		049EF5D1241DC34900C7A711 /* SingleColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleColorViewModel.swift; sourceTree = "<group>"; };
 		04A6743C23DFFFA30054F7BE /* RGBController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGBController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A6743F23DFFFA30054F7BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A6744123DFFFA30054F7BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 				04A6746523E0006C0054F7BE /* RxSwift in Frameworks */,
 				04A6746323E0006C0054F7BE /* RxCocoa in Frameworks */,
 				CF3EF8704A55F0C575B143F0 /* Pods_RGBController.framework in Frameworks */,
+				049EF5D0241DBA3200C7A711 /* JLActivityIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				04DD0EFE23E00A4A006729D2 /* SingleColorViewController.swift */,
+				049EF5D1241DC34900C7A711 /* SingleColorViewModel.swift */,
 				04DD0EFF23E00A4A006729D2 /* SingleColorViewController.xib */,
 				04D02B7E23E0DBD6000459FB /* SingleColorManagerViewController.swift */,
 				04D02B7F23E0DBD6000459FB /* SingleColorManagerViewController.xib */,
@@ -252,6 +257,7 @@
 			packageProductDependencies = (
 				04A6746223E0006C0054F7BE /* RxCocoa */,
 				04A6746423E0006C0054F7BE /* RxSwift */,
+				049EF5CF241DBA3200C7A711 /* JLActivityIndicator */,
 			);
 			productName = RGBController;
 			productReference = 04A6743C23DFFFA30054F7BE /* RGBController.app */;
@@ -306,6 +312,7 @@
 			mainGroup = 04A6743323DFFFA30054F7BE;
 			packageReferences = (
 				04A6746123E0006C0054F7BE /* XCRemoteSwiftPackageReference "RxSwift" */,
+				049EF5CE241DBA3200C7A711 /* XCRemoteSwiftPackageReference "JLActivityIndicator" */,
 			);
 			productRefGroup = 04A6743D23DFFFA30054F7BE /* Products */;
 			projectDirPath = "";
@@ -412,6 +419,7 @@
 				04A6744423DFFFA30054F7BE /* ConnectionViewController.swift in Sources */,
 				04DD0F0A23E01679006729D2 /* UIColor+RGB.swift in Sources */,
 				0431744623E0050E00DF297E /* BLEWarning.swift in Sources */,
+				049EF5D2241DC34900C7A711 /* SingleColorViewModel.swift in Sources */,
 				049D4EC123E24F94003109BC /* HSVColorViewController.swift in Sources */,
 				0431744723E0050E00DF297E /* BLESignalStrength.swift in Sources */,
 				04A6744023DFFFA30054F7BE /* AppDelegate.swift in Sources */,
@@ -590,6 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDBTK98VL3;
 				INFOPLIST_FILE = RGBController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,6 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDBTK98VL3;
 				INFOPLIST_FILE = RGBController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -699,6 +709,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		049EF5CE241DBA3200C7A711 /* XCRemoteSwiftPackageReference "JLActivityIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ljw980105/JLActivityIndicator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
 		04A6746123E0006C0054F7BE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -710,6 +728,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		049EF5CF241DBA3200C7A711 /* JLActivityIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 049EF5CE241DBA3200C7A711 /* XCRemoteSwiftPackageReference "JLActivityIndicator" */;
+			productName = JLActivityIndicator;
+		};
 		04A6746223E0006C0054F7BE /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 04A6746123E0006C0054F7BE /* XCRemoteSwiftPackageReference "RxSwift" */;

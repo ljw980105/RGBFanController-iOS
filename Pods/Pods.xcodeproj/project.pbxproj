@@ -180,11 +180,11 @@
 		400631A1AB5074BE7423D90D338142FC /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		44C6B5D320389FB80E5157772FA3D16A /* Pods-RGBControllerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RGBControllerTests.modulemap"; sourceTree = "<group>"; };
-		45791A84FE7D10B0A358ED4D8D1A9398 /* Pods_RGBControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RGBControllerTests.framework; path = "Pods-RGBControllerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45791A84FE7D10B0A358ED4D8D1A9398 /* Pods_RGBControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGBControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		457A6F779516E2D146512DF6A1CCC164 /* Pods-RGBControllerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RGBControllerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		45EA6A6B140E433E0E23C81F868BFF81 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		478BE7F52C91B15616F179F911AFC6E5 /* warningIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningIcon@2x.png"; path = "SwiftMessages/Resources/warningIcon@2x.png"; sourceTree = "<group>"; };
-		4824F23D80FF9070A5F8A452DB11EB9A /* SwiftMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftMessages.framework; path = SwiftMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4824F23D80FF9070A5F8A452DB11EB9A /* SwiftMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		484F5D2C9F66ADB314485A4E5029BF39 /* errorIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "errorIcon@3x.png"; path = "SwiftMessages/Resources/errorIcon@3x.png"; sourceTree = "<group>"; };
 		4A8C4935B3DA84065AC81F50E4752A94 /* errorIconSubtle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = errorIconSubtle.png; path = SwiftMessages/Resources/errorIconSubtle.png; sourceTree = "<group>"; };
 		4F848BC0844C654113183E50F536B805 /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
@@ -202,9 +202,9 @@
 		6DF9F7508D816EF62B65B8088CA212EA /* CALayer+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Utils.swift"; path = "SwiftMessages/CALayer+Utils.swift"; sourceTree = "<group>"; };
 		6FE9A1B1AD898BC993471B6B6C58085F /* MessageView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = MessageView.xib; path = SwiftMessages/Resources/MessageView.xib; sourceTree = "<group>"; };
 		70B2074B0B0C08B6CCCB4FF2FFAF0994 /* SwiftMessages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMessages.modulemap; sourceTree = "<group>"; };
-		753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftMessages.bundle; path = "SwiftMessages-SwiftMessages.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMessages.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		770968F38EB002BD5726559DC825FA7C /* warningIconLight@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningIconLight@3x.png"; path = "SwiftMessages/Resources/warningIconLight@3x.png"; sourceTree = "<group>"; };
-		78BA4BB1A553AB4136F879792D99C87D /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XLPagerTabStrip.bundle; path = "XLPagerTabStrip-XLPagerTabStrip.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BA4BB1A553AB4136F879792D99C87D /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A285E2019CF66829804B40BE3B1BA43 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
 		7C5C4EDF9529B746C5E229A4F288B878 /* Identifiable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Identifiable.swift; path = SwiftMessages/Identifiable.swift; sourceTree = "<group>"; };
 		7CFDC45C45995D29C371041696056D88 /* PhysicsAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhysicsAnimation.swift; path = SwiftMessages/PhysicsAnimation.swift; sourceTree = "<group>"; };
@@ -220,8 +220,8 @@
 		93A340C4F395F87C8C4FB993AC690643 /* warningIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = warningIcon.png; path = SwiftMessages/Resources/warningIcon.png; sourceTree = "<group>"; };
 		94557A209642382B4FB6339E7C373589 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
 		9582C044EDCFCDD53FCFC2536F78E18E /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
-		991D2F1A972CE5DD9B18C99077A67C6D /* Pods_RGBController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RGBController.framework; path = "Pods-RGBController.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		991D2F1A972CE5DD9B18C99077A67C6D /* Pods_RGBController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGBController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9462D30AFF0CA1553A1B36BDC6B6AA /* Pods-RGBController-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RGBController-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9DA1C30CC9FBCFCDCCF6398BBD28D8BE /* Presenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Presenter.swift; path = SwiftMessages/Presenter.swift; sourceTree = "<group>"; };
 		9F5CCEDD3B26375A01E5748CE046C6F2 /* warningIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningIcon@3x.png"; path = "SwiftMessages/Resources/warningIcon@3x.png"; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 		E91ADC37CE502699C2CB9524D90EB2D5 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		E99EA94B6C4E3BA6380CF9BE92986BF8 /* successIconSubtle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "successIconSubtle@2x.png"; path = "SwiftMessages/Resources/successIconSubtle@2x.png"; sourceTree = "<group>"; };
 		EC4147A261084FC7EB1E584C16577C5D /* BackgroundViewable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundViewable.swift; path = SwiftMessages/BackgroundViewable.swift; sourceTree = "<group>"; };
-		F1DDEA945255A18F0B9913AB1C2AB718 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLPagerTabStrip.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1DDEA945255A18F0B9913AB1C2AB718 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2478B9DABD4229DCC74060D5D549C0C /* infoIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = infoIcon.png; path = SwiftMessages/Resources/infoIcon.png; sourceTree = "<group>"; };
 		F446F08C883E4CE4F9972EBF37458B60 /* Pods-RGBController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RGBController-dummy.m"; sourceTree = "<group>"; };
 		F4CACEA35DAAF3E5F70D5EFB122F59F0 /* infoIconSubtle@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "infoIconSubtle@3x.png"; path = "SwiftMessages/Resources/infoIconSubtle@3x.png"; sourceTree = "<group>"; };
@@ -513,7 +513,6 @@
 				9B542D7658994C3B699D0BF610C77E1D /* Resources */,
 				3054CC8D6787611F22A90000E0C3E68A /* Support Files */,
 			);
-			name = XLPagerTabStrip;
 			path = XLPagerTabStrip;
 			sourceTree = "<group>";
 		};
@@ -544,7 +543,6 @@
 				86A589C926A134461DA198495AA6C9E7 /* App */,
 				69E894D20D1C4BBAE5EDC6D4C9E9F890 /* Support Files */,
 			);
-			name = SwiftMessages;
 			path = SwiftMessages;
 			sourceTree = "<group>";
 		};
@@ -742,6 +740,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = A8976B3D20EAFB9DAC31FBB988BB99E1 /* Products */;

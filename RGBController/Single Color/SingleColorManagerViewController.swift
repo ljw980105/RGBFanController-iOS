@@ -30,9 +30,17 @@ class SingleColorManagerViewController: SegmentedPagerTabStripViewController {
         segment.selectedSegmentIndex = 0
         navigationItem.titleView = segment
         segmentedControl = segment
+        segmentedControl.addTarget(self, action: #selector(moveToIndex), for: .valueChanged)
         
         BLEManager.current.rx
             .didDisconnectFromPeripheral
+            .subscribe(onNext: { [weak self] _ in
+                self?.dismissSingleColor()
+            })
+            .disposed(by: bag)
+        
+        BLEManager.current.rx
+            .didReceiveError
             .subscribe(onNext: { [weak self] _ in
                 self?.dismissSingleColor()
             })
@@ -45,8 +53,11 @@ class SingleColorManagerViewController: SegmentedPagerTabStripViewController {
         BLEManager.current.disconnect()
     }
     
+    @objc func moveToIndex() {
+        moveToViewController(at: segmentedControl.selectedSegmentIndex)
+    }
+    
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        //return [RGBColorViewController(), HSVColorViewController()]
         return [HSVColorViewController(), RGBColorViewController()]
     }
 }
