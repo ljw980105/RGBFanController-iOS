@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colorCell" id="gTV-IL-0wX" customClass="FavoritesColorCollectionViewCell" customModule="RGBController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="68" height="67"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="68" height="67"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUX-nU-OFm">
+                        <rect key="frame" x="9" y="9" width="49" height="49"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="yUX-nU-OFm" secondAttribute="height" multiplier="1:1" id="tHa-XM-yl1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="yUX-nU-OFm" secondAttribute="bottom" constant="9" id="h8Y-MK-PaF"/>
+                <constraint firstItem="yUX-nU-OFm" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="9" id="taH-wa-BHp"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="yUX-nU-OFm" secondAttribute="trailing" constant="10" id="y73-Ky-XLB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="68" height="67"/>
+            <connections>
+                <outlet property="colorView" destination="yUX-nU-OFm" id="4hB-Q8-oEZ"/>
+            </connections>
+            <point key="canvasLocation" x="150.72463768115944" y="128.23660714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

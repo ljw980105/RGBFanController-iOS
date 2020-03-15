@@ -49,8 +49,10 @@ class SingleColorViewController: UIViewController {
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "Actions", message: nil, preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Add Color to Favorites", style: .default) { _ in
-            
+        actionSheet.addAction(UIAlertAction(title: "Add Color to Favorites", style: .default) { [weak self ]_ in
+            guard let strongSelf = self else { return }
+            RGBColor.addColor(strongSelf.viewModel.currentColor)
+            try? DatabaseManager.save()
         })
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         actionSheet.view.tintColor = .orange

@@ -25,7 +25,7 @@ class SingleColorManagerViewController: SegmentedPagerTabStripViewController {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Dismiss", style: .plain, target: self, action: #selector(dismissSingleColor))
         
-        let segment = UISegmentedControl(items: ["HSV", "RGB"])
+        let segment = UISegmentedControl(items: ["HSV", "RGB", "Favorites"])
         segment.frame = CGRect(x: 0, y: 0, width: 150, height: 30)
         segment.selectedSegmentIndex = 0
         navigationItem.titleView = segment
@@ -58,6 +58,6 @@ class SingleColorManagerViewController: SegmentedPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return [HSVColorViewController(), RGBColorViewController()]
+        return [HSVColorViewController(), RGBColorViewController(), FavoriteColorCollectionViewController()]
     }
 }
