@@ -49,7 +49,7 @@ class SingleColorViewController: UIViewController {
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "Actions", message: nil, preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Add Color to Favorites", style: .default) { [weak self ]_ in
+        actionSheet.addAction(UIAlertAction(title: "Add Color to Favorites", style: .default) { [weak self] _ in
             guard let strongSelf = self else { return }
             RGBColor.addColor(strongSelf.viewModel.currentColor)
             try? DatabaseManager.save()
@@ -83,7 +83,7 @@ class SingleColorViewController: UIViewController {
     // MARK: - Private
     private func setupRx() {
         slider1.rx.value
-            .debounce(.milliseconds(100), scheduler: MainScheduler())
+            .throttle(.milliseconds(100), scheduler: MainScheduler())
             .subscribe(onNext: { [weak self] value in
                 self?.sliderOneUpdated(with: value)
                 self?.setSampleColor()
@@ -91,7 +91,7 @@ class SingleColorViewController: UIViewController {
             .disposed(by: bag)
         
         slider2.rx.value
-            .debounce(.milliseconds(100), scheduler: MainScheduler())
+            .throttle(.milliseconds(100), scheduler: MainScheduler())
             .subscribe(onNext: { [weak self] value in
                 self?.sliderTwoUpdated(with: value)
                 self?.setSampleColor()
@@ -99,10 +99,24 @@ class SingleColorViewController: UIViewController {
             .disposed(by: bag)
         
         slider3.rx.value
-            .debounce(.milliseconds(100), scheduler: MainScheduler())
+            .throttle(.milliseconds(100), scheduler: MainScheduler())
             .subscribe(onNext: { [weak self] value in
                 self?.sliderThreeUpdated(with: value)
                 self?.setSampleColor()
+            })
+            .disposed(by: bag)
+        
+        viewModel.colorPickerSubject
+            .throttle(.milliseconds(50), scheduler: MainScheduler())
+            .subscribe(onNext: { [weak self] color in
+                self?.updateSampledColorView(from: color)
+            })
+            .disposed(by: bag)
+        
+        viewModel.shouldSetColor
+            .subscribe(onNext: { [weak self] color in
+                self?.setColor(color)
+                self?.viewModel.currentColor = color
             })
             .disposed(by: bag)
     }
@@ -113,7 +127,7 @@ class SingleColorViewController: UIViewController {
     
     private func setSampleColor() {
         let color = convertSliderToColor(color: sliderValues())
-        setColor(color)
+        viewModel.sliderSubject.onNext(color)
         pickedColorView.backgroundColor = color
     }
     
@@ -128,9 +142,6 @@ class SingleColorViewController: UIViewController {
 // MARK: - Color Picker Delegate
 extension SingleColorViewController: ColorPickerDelegate {
     func colorPicker(_ colorPicker: ColorPicker, touchedAt point: CGPoint, color: UIColor, state: UIGestureRecognizer.State) {
-        setColor(color)
-        updateSampledColorView(from: color)
-        viewModel.currentColor = color
-        
+        viewModel.colorPickerSubject.onNext(color)
     }
 }

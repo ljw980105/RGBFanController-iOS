@@ -57,6 +57,7 @@ class FavoriteColorCollectionViewController: UICollectionViewController {
         BLEManager.current.send(
             colorCommand: OutgoingCommands.setColor.rawValue,
             color: UIColor(rgbColor: color))
+        Haptic.current.mediumImpact()
     }
 }
 

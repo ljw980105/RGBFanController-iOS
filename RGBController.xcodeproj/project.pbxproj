@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041843A3241F121A00F95B17 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041843A2241F121A00F95B17 /* Haptic.swift */; };
 		0431744323E0050E00DF297E /* BLEError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431743D23E0050E00DF297E /* BLEError.swift */; };
 		0431744423E0050E00DF297E /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431743E23E0050E00DF297E /* BLEManager.swift */; };
 		0431744523E0050E00DF297E /* BLEManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431743F23E0050E00DF297E /* BLEManagerDelegate.swift */; };
@@ -41,7 +42,7 @@
 		04DD0F0023E00A4A006729D2 /* SingleColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD0EFE23E00A4A006729D2 /* SingleColorViewController.swift */; };
 		04DD0F0123E00A4A006729D2 /* SingleColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DD0EFF23E00A4A006729D2 /* SingleColorViewController.xib */; };
 		04DD0F0423E010C6006729D2 /* OutgoingCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD0F0323E010C6006729D2 /* OutgoingCommands.swift */; };
-		04DD0F0723E011E5006729D2 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD0F0623E011E5006729D2 /* ColorPickerView.swift */; };
+		04DD0F0723E011E5006729D2 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD0F0623E011E5006729D2 /* ColorPicker.swift */; };
 		04DD0F0A23E01679006729D2 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD0F0923E01679006729D2 /* UIColor+RGB.swift */; };
 		CF3EF8704A55F0C575B143F0 /* Pods_RGBController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D05976441D7F08711492353 /* Pods_RGBController.framework */; };
 		E863D8077BE6A770A2399C47 /* Pods_RGBControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D000F3E922DDDEF414B8932 /* Pods_RGBControllerTests.framework */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041843A2241F121A00F95B17 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		0431743D23E0050E00DF297E /* BLEError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEError.swift; sourceTree = "<group>"; };
 		0431743E23E0050E00DF297E /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		0431743F23E0050E00DF297E /* BLEManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 		04DD0EFE23E00A4A006729D2 /* SingleColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleColorViewController.swift; sourceTree = "<group>"; };
 		04DD0EFF23E00A4A006729D2 /* SingleColorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleColorViewController.xib; sourceTree = "<group>"; };
 		04DD0F0323E010C6006729D2 /* OutgoingCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingCommands.swift; sourceTree = "<group>"; };
-		04DD0F0623E011E5006729D2 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		04DD0F0623E011E5006729D2 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		04DD0F0923E01679006729D2 /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		06EBC5BB9ED8C276BE94263F /* Pods-RGBControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBControllerTests.debug.xcconfig"; path = "Target Support Files/Pods-RGBControllerTests/Pods-RGBControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1E68F817B3F9D18D90F209C3 /* Pods-RGBControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBControllerTests.release.xcconfig"; path = "Target Support Files/Pods-RGBControllerTests/Pods-RGBControllerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,7 +135,9 @@
 				04DD0F0823E01667006729D2 /* Extensions */,
 				04DD0F0223E010B4006729D2 /* Commands */,
 				0431744923E0051500DF297E /* BLE */,
+				049EF5E5241DD88300C7A711 /* FlowLayout.swift */,
 				0431744A23E0056C00DF297E /* SwiftMessagesWrapper.swift */,
+				041843A2241F121A00F95B17 /* Haptic.swift */,
 			);
 			path = "Model Classes";
 			sourceTree = "<group>";
@@ -244,7 +248,7 @@
 		04DD0F0523E0111E006729D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04DD0F0623E011E5006729D2 /* ColorPickerView.swift */,
+				04DD0F0623E011E5006729D2 /* ColorPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				04DD0F0923E01679006729D2 /* UIColor+RGB.swift */,
-				049EF5E5241DD88300C7A711 /* FlowLayout.swift */,
 				049EF5E7241DEA0400C7A711 /* UIColor+RGBColor.swift */,
 			);
 			path = Extensions;
@@ -472,6 +475,7 @@
 				049EF5D6241DCD5100C7A711 /* RGBDatabase.xcdatamodeld in Sources */,
 				049D4EC123E24F94003109BC /* HSVColorViewController.swift in Sources */,
 				0431744723E0050E00DF297E /* BLESignalStrength.swift in Sources */,
+				041843A3241F121A00F95B17 /* Haptic.swift in Sources */,
 				04A6744023DFFFA30054F7BE /* AppDelegate.swift in Sources */,
 				0431744523E0050E00DF297E /* BLEManagerDelegate.swift in Sources */,
 				0431744B23E0056C00DF297E /* SwiftMessagesWrapper.swift in Sources */,
@@ -483,7 +487,7 @@
 				04DD0F0023E00A4A006729D2 /* SingleColorViewController.swift in Sources */,
 				04D02B8023E0DBD6000459FB /* SingleColorManagerViewController.swift in Sources */,
 				0431744823E0050E00DF297E /* BLEManager+Rx.swift in Sources */,
-				04DD0F0723E011E5006729D2 /* ColorPickerView.swift in Sources */,
+				04DD0F0723E011E5006729D2 /* ColorPicker.swift in Sources */,
 				04A6744223DFFFA30054F7BE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

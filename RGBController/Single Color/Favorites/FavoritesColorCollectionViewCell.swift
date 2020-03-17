@@ -22,6 +22,8 @@ class FavoritesColorCollectionViewCell: UICollectionViewCell {
         colorView.clipsToBounds = true
         colorView.layer.cornerRadius = width
         colorView.backgroundColor = color
+        colorView.layer.borderColor = UIColor.gray.cgColor
+        colorView.layer.borderWidth = 0.5
     }
 
 }
