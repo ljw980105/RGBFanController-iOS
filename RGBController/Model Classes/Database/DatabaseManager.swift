@@ -10,7 +10,7 @@ import CoreData
 
 class DatabaseManager: NSObject {
     
-    static let persistentContainer: NSPersistentContainer = {
+    private static let persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "RGBDatabase")
         container.loadPersistentStores { storeDescription, error in
             if let error = error {

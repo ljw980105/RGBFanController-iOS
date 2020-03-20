@@ -59,13 +59,39 @@ class FavoriteColorCollectionViewController: UICollectionViewController {
             color: UIColor(rgbColor: color))
         Haptic.current.mediumImpact()
     }
+    
+    // MARK: Context Menu
+    
+    override func collectionView(
+        _ collectionView: UICollectionView,
+        contextMenuConfigurationForItemAt indexPath: IndexPath,
+        point: CGPoint) -> UIContextMenuConfiguration?
+    {
+        let rgb = frc.object(at: indexPath)
+        return UIContextMenuConfiguration(
+          identifier: nil,
+          previewProvider: nil,
+          actionProvider: { _ in
+            return UIMenu(title: "R:\(rgb.r) G:\(rgb.g) B:\(rgb.b)", children: [
+                UIAction(title: "Delete Color", image: UIImage(named: "deleteIcon"), handler: { _ in
+                    // delete from DB
+                    RGBColor.deleteColor(rgb)
+                    try? DatabaseManager.save()
+                })
+            ])
+        })
+    }
 }
+
+// MARK: - XLPagerTabStrip
 
 extension FavoriteColorCollectionViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Favorites")
     }
 }
+
+// MARK: - Core Data FRC
 
 extension FavoriteColorCollectionViewController: NSFetchedResultsControllerDelegate {
     func controller(
@@ -76,7 +102,11 @@ extension FavoriteColorCollectionViewController: NSFetchedResultsControllerDeleg
         newIndexPath: IndexPath?)
     {
         collectionView.performBatchUpdates({
-            collectionView.insertItems(at: [newIndexPath].compactMap { $0 })
+            if type == .insert {
+                collectionView.insertItems(at: [newIndexPath].compactMap { $0 })
+            } else if type == .delete {
+                collectionView.deleteItems(at: [newIndexPath].compactMap { $0 })
+            }
         }, completion: nil)
     }
 }

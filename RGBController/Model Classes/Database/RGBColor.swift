@@ -29,6 +29,10 @@ class RGBColor: NSManagedObject {
         rgbColor.g = Int64(rgb.g)
     }
     
+    class func deleteColor(_ color: RGBColor, context: NSManagedObjectContext = DatabaseManager.context) {
+        context.delete(color)
+    }
+    
     class func getAllColors(context: NSManagedObjectContext = DatabaseManager.context) -> [UIColor] {
         let fetchRequest: NSFetchRequest<RGBColor> = RGBColor.fetchRequest()
         fetchRequest.predicate = NSPredicate(value: true)
