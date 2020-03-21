@@ -29,7 +29,7 @@ class ConnectionViewController: UIViewController {
             .tap
             .flatMap { _ -> Observable<Void> in
                 activityIndicator.start()
-                return BLEManager.current.rx.connect(module: "=ADC_test")
+                return BLEManager.current.rx.connect(module: "SH-HC-08")
             }
             .subscribe(onNext: { [weak self] _ in
                 activityIndicator.stop()
